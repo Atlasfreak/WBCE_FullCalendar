@@ -1,0 +1,58 @@
+<!-- BEGIN main_block -->
+<div class="fullcalendar">
+    <!--(MOVE) CSS HEAD BTM- -->
+    <link rel="stylesheet" href="{WB_URL}/modules/fullcalendar/include/css/fullcalendar.css">
+    <link rel="stylesheet" href="{WB_URL}/modules/fullcalendar/include/css/tooltip.css">
+    <link rel="stylesheet" href="{WB_URL}/modules/fullcalendar/include/css/custom.css">
+    <!--(END)-->
+    <div id='script-warning'>
+        {CAL_LOAD_ERROR}
+    </div>
+    <div id='loading'>{CAL_LOAD_MSG}...</div>
+    <div id='calendar{SECTION_ID}'></div>
+    <!--(MOVE) JS BODY BTM+ -->
+    <script src="{WB_URL}/modules/fullcalendar/include/js/fullcalendar_ical.js"></script>
+    <script src="{WB_URL}/modules/fullcalendar/include/js/icalendar.js"></script>
+    <script src="{WB_URL}/modules/fullcalendar/include/js/tooltip.js"></script>
+    <script src="{WB_URL}/modules/fullcalendar/include/js/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar{SECTION_ID}');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: '{CAL_LANG}',
+                headerToolbar: {
+                    left: 'prev,today,next',
+                    center: 'title',
+                    right: 'dayGridMonth,listMonth'
+                },
+                aspectRatio: 1.5,
+                weekNumbers: "{WEEK_NUMBERS}",
+                weekNumberFormat: { week: "numeric" },
+                eventDidMount: info => createTooltip(info),
+                events: {
+                    url: '{CAL_FILE_URL}',
+                    format: 'ics',
+                    failure: function () {
+                        document.getElementById('script-warning').style.display = 'block';
+                    }
+                },
+                loading: function (bool) {
+                    document.getElementById('loading').style.display =
+                        bool ? 'block' : 'none';
+                },
+                businessHours: {
+                    // days of week. an array of zero-based day of week integers (0=Sunday)
+                    daysOfWeek: [1, 2, 3, 4, 5], // Monday - Thursday
+
+                    startTime: '00:00', // a start time (10am in this example)
+                    endTime: '23:59', // an end time (6pm in this example)
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
+    <!--(END)-->
+</div>
+<!-- END main_block -->

@@ -1,0 +1,44 @@
+<!-- BEGIN main_block -->
+
+<form class="fullcalendar" action="{WB_URL}/modules/fullcalendar/save.php" method="post">
+    <input type="hidden" name="section_id" value="{SECTION_ID}" />
+    <input type="hidden" name="page_id" value="{PAGE_ID}" />
+    {FTAN}
+
+    <h3>{TITLE}</h3>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td align="left" colspan=2>
+                {TXT_CAL_URLS}
+                <textarea cols="2" rows="10" id="cal_urls_{SECTION_ID}" name="cal_urls">{CAL_URLS}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                {TXT_WEEK_NUMBERS}
+                <input type="checkbox" name="week_numbers" id="week_numbers{SECTION_ID}" value="week_numbers"
+                    {WEEK_NUMBERS}>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                {TXT_CACHE_TIME}
+            </td>
+            <td align="right">
+                <input type="number" name="cache_time" id="cache_time{SECTION_ID}" value="{CACHE_TIME}">
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <input type="submit" value="{TEXT_SAVE}" style="width: 100px; margin-top: 5px;" />
+            </td>
+            <td style="text-align: right;">
+                <input type="button" value="{TEXT_CANCEL}" onclick="javascript: window.location = 'index.php';"
+                    style="width: 100px; margin-top: 5px;" />
+            </td>
+        </tr>
+
+
+    </table>
+</form>
+<!-- END main_block -->

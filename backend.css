@@ -1,0 +1,27 @@
+/* padding */
+form.fullcalendar, .fullcalendar textarea, .fullcalendar input {padding: 5px;}
+
+.fullcalendar textarea { width: 100%; height: 100px }
+
+/* input width */
+.fullcalendar input { min-width: 200px; max-width: 30%; margin-top: 5px;}
+
+/* zebra tr's */
+.fullcalendar tr:nth-child(even)
+{
+    background: #eee
+}
+
+/* kill zebra */
+.fullcalendar tr:nth-child(2),   /* before first textarea */
+.fullcalendar tr:nth-child(24),  /* misc settings headline */
+.fullcalendar tr:nth-child(28),  /* third textarea */
+.fullcalendar tr:nth-child(32),  /* save, delete */
+.fullcalendar tr:last-child      /* empty cache */
+{
+    background: none
+}
+
+/* left td's */
+.fullcalendar tr td:first-child {width: 65%}
+
