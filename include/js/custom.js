@@ -9,7 +9,11 @@ function eventTime(event) {
 function createTooltip(info) {
     let el = $(info.el)
     el.prop("title", info.event.title)
-    let txt = `<p>${eventTime(info.event)}</p>`
+    let txt_event_time = eventTime(info.event)
+    let txt = ""
+    if (txt_event_time) {
+        txt += `<p>${txt_event_time}</p>`
+    }
     txt += `<b>${info.event.title}</b>`
     if (info.event.extendedProps.description !== null) {
         txt += `<hr><p>${info.event.extendedProps.description}</p>`
