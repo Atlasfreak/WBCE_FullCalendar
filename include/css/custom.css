@@ -47,3 +47,6 @@
     white-space: normal;
     max-width: 300px;
 }
+#powerTip *{
+    color: white !important;
+}
