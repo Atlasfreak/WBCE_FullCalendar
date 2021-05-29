@@ -1,10 +1,15 @@
 /* padding */
-form.fullcalendar, .fullcalendar textarea, .fullcalendar input {padding: 5px;}
+.fullcalendar {
+    overflow-x: auto;
+}
 
 .fullcalendar textarea { width: 100%; height: 100px }
 
 /* input width */
-.fullcalendar input { min-width: 200px; max-width: 30%; margin-top: 5px;}
+.fullcalendar input { min-width: min-content; max-width: 30%; margin-top: 5px;}
+.fullcalendar input[type="checkbox"] {
+    margin-left: 10%;
+}
 
 /* zebra tr's */
 .fullcalendar tr:nth-child(even)
