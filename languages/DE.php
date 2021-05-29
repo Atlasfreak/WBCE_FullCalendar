@@ -1,6 +1,6 @@
 <?php
 
-$module_description = 'Dieses Modul ermöglicht es externe Kalender mit dem <a href="https://fullcalendar.io">FullCalendar v5</a> Frontend darzustellen.';
+$module_description = 'Dieses Modul ermöglicht es externe Kalender mit dem <a href="https://fullcalendar.io">FullCalendar v5</a> darzustellen.';
 
 $LANG['backend'] = array(
     'TXT_SETTINGS_TITLE'    => 'Einstellungen für das FullCalendar Modul',

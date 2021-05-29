@@ -1,6 +1,6 @@
 <?php
 
-$module_description = 'This module allows you to display external ICal (ics) calendars on your website with <a href="https://fullcalendar.io">FullCalendar v5</a> in the frontend.';
+$module_description = 'This module allows you to display external ICal (ics) calendars on your website with <a href="https://fullcalendar.io">FullCalendar v5</a>.';
 
 $LANG['backend'] = array(
     'TXT_SETTINGS_TITLE'    => 'Settings for the fullcalendar module',
