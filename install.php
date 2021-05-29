@@ -18,6 +18,7 @@ if (defined('WB_URL')) {
         . "PRIMARY KEY (section_id)"
         . ")";
     $database->query($mod_create_table);
+    if(!file_exists(dirname(__FILE__)."/cache")) mkdir(dirname(__FILE__)."/cache");
 }
 
 ?>

@@ -14,7 +14,7 @@
 if(!defined('WB_PATH')) die(header('Location: index.php'));
 
 $CURRENT_DB_FIELDS = array(
-    "cal_urls"          => "TEXT NOT NULL",
+    "cal_urls"          => "TEXT NOT NULL DEFAULT '".WB_URL."/modules/fullcalendar/calendars/exapmle.ics'",
     "cache_time"        => "INT NOT NULL DEFAULT 120",
     "week_numbers"      => "TINYINT(1) NOT NULL DEFAULT 1",
     "recently_modified" => "TINYINT(1) NOT NULL DEFAULT 1",
