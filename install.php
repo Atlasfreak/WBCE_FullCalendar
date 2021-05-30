@@ -20,5 +20,3 @@ if (defined('WB_URL')) {
     $database->query($mod_create_table);
     if(!file_exists(dirname(__FILE__)."/cache")) mkdir(dirname(__FILE__)."/cache");
 }
-
-?>

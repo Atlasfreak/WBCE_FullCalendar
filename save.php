@@ -39,5 +39,3 @@ if($database->is_error()) {
 
 // print admin footer
 $admin->print_footer()
-
-?>

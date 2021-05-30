@@ -38,5 +38,3 @@ $module_platform    = '1.5.x';
 $module_author      = 'Per Göttlicher';
 $module_license     = 'GNU General Public License v3';
 $module_description = 'This module allows you to display external ICal (ics) calendars on your website with FullCalendar v5 (fullcalendar.io).';
-
-?>

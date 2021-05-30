@@ -12,5 +12,3 @@ $LANG['frontend'] = array(
     'TXT_CAL_LOAD_ERROR'    => 'Der Kalender konnte nicht geladen werden.',
     'TXT_CAL_LOAD_MSG'      => 'Kalender wird geladen',
 );
-
-?>
