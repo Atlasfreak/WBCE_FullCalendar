@@ -3,7 +3,7 @@
  *
  * @category        page
  * @package         External Calendar
- * @version         0.1
+ * @version         1.0
  * @authors         Per Göttlicher
  * @copyright       2021-, Per Göttlicher (Atlasfreak)
  * @link            https://github.com/Atlasfreak/WBCE_FullCalendar
@@ -32,7 +32,7 @@
 $module_directory   = 'fullcalendar';
 $module_name        = 'FullCalendar';
 $module_function    = 'page';
-$module_version     = '0.1.2';
+$module_version     = '1.0';
 $module_platform    = '1.5.x';
 
 $module_author      = 'Per Göttlicher';

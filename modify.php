@@ -8,6 +8,8 @@ if(!defined('WB_PATH')) die(header('Location: index.php'));
 $lang = (dirname(__FILE__))."/languages/". LANGUAGE .".php";
 require_once(!file_exists($lang) ? (dirname(__FILE__))."/languages/EN.php" : $lang);
 
+require("database.php");
+
 // check if backend.css file needs to be included into the <body></body> of modify.php
 if(!method_exists($admin, 'register_backend_modfiles') && file_exists(WB_PATH .'/modules/fullcalendar/backend.css')) {
     echo '<style type="text/css">';
@@ -15,8 +17,8 @@ if(!method_exists($admin, 'register_backend_modfiles') && file_exists(WB_PATH .'
     echo "\n</style>\n";
 }
 
-$sql_result = $database->query("SELECT * FROM `" .TABLE_PREFIX ."mod_fullcalendar` WHERE `section_id` = '$section_id'");
-$content = $sql_result->fetchRow();
+// $sql_result = $database->query("SELECT * FROM `".$db_table_name."` WHERE `section_id` = '$section_id'");
+$content = $fc_db->db_get_data($section_id);
 
 $cal_urls = htmlspecialchars($content['cal_urls']);
 

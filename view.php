@@ -6,9 +6,10 @@ if(!defined('WB_PATH')) die(header('Location: index.php'));
 $lang = (dirname(__FILE__))."/languages/". LANGUAGE .".php";
 require_once(!file_exists($lang) ? (dirname(__FILE__))."/languages/EN.php" : $lang);
 
+require("database.php");
+
 // obtain data from module DB-table of the current displayed page (unique page defined via section_id)
-$sql_result = $database->query("SELECT * FROM `".TABLE_PREFIX."mod_fullcalendar` WHERE `section_id` = '$section_id'");
-$content = $sql_result->fetchRow();
+$content = $fc_db->db_get_data($section_id);
 
 $cal_urls = $content['cal_urls'];
 $cal_urls = preg_split("/[\s]+/", $cal_urls);
@@ -16,9 +17,16 @@ $cal_urls = preg_split("/[\s]+/", $cal_urls);
 $cal_fpath = dirname(__FILE__)."/cache/calendars".$section_id.".ics";
 $cal_local_url = WB_URL."/modules/fullcalendar/cache/calendars".$section_id.".ics";
 $cal_file = false;
-if (time() - filemtime($cal_fpath) > $content['cache_time'] || boolval($content['recently_modified']) || !file_exists($cal_fpath)) {
+
+if (!file_exists($cal_fpath) || time() - filemtime($cal_fpath) > $content['cache_time'] || boolval($content['recently_modified'])) {
     $cal_file = fopen($cal_fpath, "w");
-    $database->query("UPDATE `".TABLE_PREFIX."mod_fullcalendar` SET `recently_modified` = 0 WHERE `section_id` = '$section_id'");
+    if (boolval($content['recently_modified'])) {
+        $data = array(
+            "section_id"        => $section_id,
+            "recently_modified" => 0,
+        );
+        $fc_db->db_add_row("section_id", $data);
+    }
 }
 
 if ($cal_file !== false) {
@@ -41,6 +49,7 @@ if ($cal_file !== false) {
     fwrite($cal_file, "END:VCALENDAR");
     fclose($cal_file);
 }
+
 $template = new Template(WB_PATH.'/modules/fullcalendar');
 $template->set_file('page', 'templates/view.htt');
 $template->set_block('page', 'main_block', 'main');

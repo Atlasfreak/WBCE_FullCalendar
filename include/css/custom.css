@@ -2,6 +2,11 @@
     text-align: center;
     font-weight: bold;
     color: red;
+    display: none;
+}
+
+#loading {
+    display: none;
 }
 
 .fullcalendar {
