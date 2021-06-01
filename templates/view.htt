@@ -27,7 +27,7 @@
                     right: 'dayGridMonth,listMonth'
                 },
                 dayMaxEvents: true,
-                aspectRatio: 1.1,
+                aspectRatio: 1.5,
                 weekNumbers: "{WEEK_NUMBERS}",
                 weekNumberFormat: { week: "numeric" },
                 eventDidMount: info => createTooltip(info),

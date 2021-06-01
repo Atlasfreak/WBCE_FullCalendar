@@ -15,8 +15,9 @@ function createTooltip(info) {
         txt += `<p>${txt_event_time}</p>`
     }
     txt += `<b>${info.event.title}</b>`
-    if (info.event.extendedProps.description !== null) {
-        txt += `<hr><p>${info.event.extendedProps.description}</p>`
+    let description = info.event.extendedProps.description
+    if (description !== null && description !== "") {
+        txt += `<hr><p>${description}</p>`
     }
     if (info.event.extendedProps.location !== null) {
         txt += `<p><i>${info.event.extendedProps.location}</i></p>`
