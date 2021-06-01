@@ -18,3 +18,4 @@ You are able to specify how long it will wait before trying to get a new version
 # Planned Features
 - ability to select which views are displayed
 - access to more options of FullCalendar
+- size preview of calendar
