@@ -32,7 +32,9 @@
 .fc-view-harness .fc-list {
     overflow-x: auto;
 }
-
+.fc .fc-view-harness {
+    line-height: 130%;
+}
 /* Tooltip */
 
 #powerTip {

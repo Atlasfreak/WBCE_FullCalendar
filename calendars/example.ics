@@ -30,7 +30,7 @@ RRULE:FREQ=MONTHLY;BYMONTHDAY=1
 DTSTAMP:20210529T010337Z
 UID:1s6vq19t6dqj2n5ndivdmqehln@google.com
 CREATED:20210529T010100Z
-DESCRIPTION:Dies ist ein Test Eintrag um die Funktionalität des Modul zu te
+DESCRIPTION:Dies ist ein Test Eintrag um die Funktionalität des Moduls zu te
  sten.
 LAST-MODIFIED:20210529T010100Z
 LOCATION:Dies ist ein Ort
@@ -48,7 +48,7 @@ UID:3ngnlqilf85h6vtr4hn4vu01d2@google.com
 CREATED:20210529T010204Z
 DESCRIPTION:Dies ist ein Test Termin für dieses Modul.
 LAST-MODIFIED:20210529T010314Z
-LOCATION:Dies ein anderer Ort
+LOCATION:Dies ist ein anderer Ort
 SEQUENCE:1
 STATUS:CONFIRMED
 SUMMARY:WBCE Fullcalendar Test 2
