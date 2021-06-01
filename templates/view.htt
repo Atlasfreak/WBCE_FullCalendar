@@ -26,8 +26,8 @@
                     center: 'title',
                     right: 'dayGridMonth,listMonth'
                 },
-                dayMaxEvents: true,
-                aspectRatio: 1.5,
+                dayMaxEventRows: 3,
+                contentHeight: "auto",
                 weekNumbers: "{WEEK_NUMBERS}",
                 weekNumberFormat: { week: "numeric" },
                 eventDidMount: info => createTooltip(info),
@@ -50,7 +50,9 @@
                     endTime: '23:59', // an end time
                 }
             });
-
+            if (calendarEl.offsetWidth < 480) {
+                calendar.setOption("dayMaxEventRows", false)
+            }
             calendar.render();
         });
     </script>

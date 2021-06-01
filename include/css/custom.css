@@ -16,7 +16,7 @@
 }
 @media only screen and (max-width: 768px) {
     .fullcalendar {
-        margin: 0 0;
+        margin: 20px auto;
     }
     .fc-event-time {
         display: none;
@@ -29,11 +29,10 @@
 .fc-toolbar-chunk {
     margin-bottom: 2px;
 }
-.fc-view-harness .fc-list {
-    overflow-x: auto;
-}
-.fc .fc-view-harness {
+.fc .fc-view-harness, .fc-view-harness .fc-list {
     line-height: 130%;
+    max-height: 700px;
+    overflow: auto;
 }
 /* Tooltip */
 
