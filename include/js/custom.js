@@ -1,8 +1,9 @@
 function eventTime(event) {
     if (!event.allDay) {
-        let txt_start = event.start.toLocaleString({}, { timeStyle: "short" })
-        let txt_end = event.end.toLocaleString({}, { timeStyle: "short" })
-        return `${txt_start} - ${txt_end}`
+        let txt_start = (event.start != null) ? event.start.toLocaleString({}, { timeStyle: "short" }) : ""
+        let txt_end = (event.end != null) ? ` - ${event.end.toLocaleString({}, { timeStyle: "short" })}` : ""
+
+        return `${txt_start}${txt_end}`
     }
     return ""
 }
