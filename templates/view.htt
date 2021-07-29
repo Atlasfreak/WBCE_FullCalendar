@@ -1,7 +1,7 @@
 <!-- BEGIN main_block -->
 <div class="fullcalendar">
     <!--(MOVE) CSS HEAD BTM- -->
-    <link rel="stylesheet" href="{WB_URL}/modules/fullcalendar/include/css/fullcalendar.css">
+    <link rel="stylesheet" href="{WB_URL}/modules/fullcalendar/include/css/fullcalendar.min.css">
     <link rel="stylesheet" href="{WB_URL}/modules/fullcalendar/include/css/tooltip.css">
     <link rel="stylesheet" href="{WB_URL}/modules/fullcalendar/include/css/custom.css">
     <!--(END)-->
@@ -11,8 +11,8 @@
     <div id='loading'>{CAL_LOAD_MSG}...</div>
     <div id='calendar{SECTION_ID}'></div>
     <!--(MOVE) JS BODY BTM+ -->
-    <script src="{WB_URL}/modules/fullcalendar/include/js/fullcalendar_ical.js"></script>
-    <script src="{WB_URL}/modules/fullcalendar/include/js/icalendar.js"></script>
+    <script src="{WB_URL}/modules/fullcalendar/include/js/ical.min.js"></script>
+    <script src="{WB_URL}/modules/fullcalendar/include/js/fullcalendar_complete.min.js"></script>
     <script src="{WB_URL}/modules/fullcalendar/include/js/tooltip.js"></script>
     <script src="{WB_URL}/modules/fullcalendar/include/js/custom.js"></script>
     <script>
