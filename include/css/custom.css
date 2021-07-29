@@ -29,10 +29,15 @@
 .fc-toolbar-chunk {
     margin-bottom: 2px;
 }
-.fc .fc-view-harness, .fc-view-harness .fc-list {
+.fc .fc-view-harness, .fc-view-harness .fc-view {
     line-height: 130%;
+}
+.fc-view-harness > .fc-daygrid.fc-dayGridMonth-view.fc-view, .fc .fc-list {
     max-height: 700px;
     overflow: auto;
+}
+.fc .fc-list {
+    max-height: 600px;
 }
 /* Tooltip */
 

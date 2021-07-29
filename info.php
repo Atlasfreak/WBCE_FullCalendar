@@ -28,11 +28,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
-
+/*
+ * When updating the Javascript bundle: https://www.jsdelivr.com/package/npm/fullcalendar main.min.js, locales-all.min.js
+ * and https://www.jsdelivr.com/package/npm/@fullcalendar/icalendar main.global.min.js.
+ * Add Ical.js seperatly.
+ */
 $module_directory   = 'fullcalendar';
 $module_name        = 'FullCalendar';
 $module_function    = 'page';
-$module_version     = '1.1.1';
+$module_version     = '1.1.2';
 $module_platform    = '1.5.x';
 
 $module_author      = 'Per Göttlicher';
