@@ -1,11 +1,10 @@
 <?php
 /**
  *
- * @category        page
- * @package         External Calendar
+ * @package         FullCalendar
  * @authors         Per Göttlicher
  * @copyright       2021-, Per Göttlicher (Atlasfreak)
- * @link
+ * @link            https://github.com/Atlasfreak/WBCE_FullCalendar
  * @license         https://www.gnu.org/licenses/gpl-3.0.html
  * @platform        WBCE 1.5.x
  *
@@ -16,7 +15,7 @@ class FCDatabase {
     const DB_TABLE_NAME = TABLE_PREFIX."mod_fullcalendar";
 
     const CURRENT_DB_FIELDS = array(
-        "cal_urls"          => "TEXT NOT NULL DEFAULT '".WB_URL."/modules/fullcalendar/calendars/example.ics'",
+        "cal_urls"          => "TEXT NOT NULL DEFAULT ('".WB_URL."/modules/fullcalendar/calendars/example.ics')",
         "cache_time"        => "INT NOT NULL DEFAULT 120",
         "week_numbers"      => "TINYINT(1) NOT NULL DEFAULT 1",
         "recently_modified" => "TINYINT(1) NOT NULL DEFAULT 1",

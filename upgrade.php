@@ -1,11 +1,10 @@
 <?php
 /**
  *
- * @category        page
- * @package         External Calendar
+ * @package         FullCalendar
  * @authors         Per Göttlicher
  * @copyright       2021-, Per Göttlicher (Atlasfreak)
- * @link
+ * @link            https://github.com/Atlasfreak/WBCE_FullCalendar
  * @license         https://www.gnu.org/licenses/gpl-3.0.html
  * @platform        WBCE 1.5.x
  *

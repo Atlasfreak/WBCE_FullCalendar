@@ -17,7 +17,6 @@ if(!method_exists($admin, 'register_backend_modfiles') && file_exists(WB_PATH .'
     echo "\n</style>\n";
 }
 
-// $sql_result = $database->query("SELECT * FROM `".$db_table_name."` WHERE `section_id` = '$section_id'");
 $content = $fc_db->db_get_data($section_id);
 
 $cal_urls = htmlspecialchars($content['cal_urls']);

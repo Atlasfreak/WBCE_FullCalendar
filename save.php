@@ -30,7 +30,7 @@ $week_numbers = intval(boolval($admin->get_post('week_numbers')));
 $data = array(
     "section_id"        => $section_id,
     "cal_urls"          => $cal_urls,
-    "cache_time"         => $cache_time,
+    "cache_time"        => $cache_time,
     "week_numbers"      => $week_numbers,
     "recently_modified" => 1,
 );
